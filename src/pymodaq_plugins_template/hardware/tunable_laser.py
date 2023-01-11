@@ -133,7 +133,7 @@ class TunableLaser:
 
         return start, stop, step
 
-    def start_weep(self):
+    def start_sweep(self):
         self._write(f':SOURce0:WAVelength:SWEep: STARt')
 
     @property
