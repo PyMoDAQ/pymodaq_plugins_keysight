@@ -134,7 +134,7 @@ class TunableLaser:
         return start, stop, step
 
     def start_sweep(self):
-        self._write(f':SOURce0:WAVelength:SWEep: STARt')
+        self._write(f':SOURce0:WAVelength:SWEep STARt')
 
     @property
     def laser_status(self) -> bool:
@@ -175,7 +175,7 @@ if __name__ == '__main__':
     laser.sweep_mode = SweepMode['CONT']
     print(laser.sweep_mode)
 
-    print(laser.configure_sweep(1460, 1500, 10))
+    print(laser.configure_sweep(1460, 1620, 10))
 
     print(laser.locked)
     laser.locked = True
